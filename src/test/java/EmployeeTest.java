@@ -1,7 +1,5 @@
 import junit.framework.TestCase;
 
-import java.util.Random;
-
 public class EmployeeTest extends TestCase {
 
     Employee employee1;
