@@ -4,7 +4,11 @@ public class Employee {
     private final int workHours;
     private final int hireYear;
 
-    public Employee(String name, float salary, int workHours, int hireYear) {
+    public Employee(String name, float salary, int workHours, int hireYear) throws IllegalArgumentException{
+        if(name == null || name.equals("")) throw new IllegalArgumentException("Invalid name.");
+        if(salary < 0) throw new IllegalArgumentException("Invalid salary.");
+        if(workHours < 0) throw new IllegalArgumentException("Invalid workHours.");
+        if(hireYear > 2021) throw new IllegalArgumentException("Invalid hireYear.");
         this.name = name;
         this.salary = salary;
         this.workHours = workHours;
